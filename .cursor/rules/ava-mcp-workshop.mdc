@@ -1,0 +1,22 @@
+---
+description: Route all AVA work in this repo through the workshop MCP server only
+alwaysApply: true
+---
+
+# AVA MCP - cxanorampubsec
+
+This workspace builds AVAs exclusively against **cxanorampubsec** (prod-usw2).
+
+## MCP namespace
+
+Use **`ava-harness`** only (Cursor may expose it as `project-0-…-ava-harness`).
+
+Do **not** call tools from:
+- `user-ava-harness`
+- `ava-harness`
+- any other AVA harness namespace
+
+## Local workspace
+
+- AVA lifecycle artifacts live under `.ava-lifecycle/` (standard AVA lifecycle layout).
+- Credentials are in `.cursor/mcp.json` (gitignored).
